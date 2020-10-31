@@ -16,7 +16,7 @@ export const AddCategory = ( { setCategories } ) => {
        
         if( inputValue.trim().length > 2 ){ // validacion mayor a 2 caracteres
 
-            setCategories( cats => [ ...cats, inputValue ]); 
+            setCategories( cats => [ inputValue, ...cats ]); // si ponemos inputValue primero la ultima busqueda aparece al principio
             setinputValue('');
         }
         
